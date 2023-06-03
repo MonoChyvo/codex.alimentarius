@@ -1,0 +1,413 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111;
+  color: whitesmoke;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  scroll-behavior: smooth;
+}
+
+select, input {
+  outline: none;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.header a {
+  font-weight: bold;
+  color: crimson;
+}
+
+.navBar {
+  position: relative;
+  display: flex;
+  gap: 10px
+}
+
+.receta {
+  position: relative;
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  top: -20px;
+  gap: 10px;
+  background-color: #000;
+  border-radius: 5px;
+  box-shadow: 3px 3px 15px midnightblue;
+  padding: 10px;
+}
+
+.receta-formulario {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #313131;
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.receta-formulario:first-child {
+  justify-content: center;
+}
+
+.receta-formulario input[type=number] {
+  border: 3px solid #308aff;
+  border-radius: 10px;
+  width: 80px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: #282828;
+  color: gray;
+}
+
+.receta-formulario input[type=text] {
+  border: 3px solid #308aff;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  width: 95%;
+  padding: 4px;
+  background-color: #282828;
+  color: gray;
+}
+
+.receta-formulario label,
+.receta-formulario p:first-child {
+  font-weight: 600;
+}
+
+.tablaCosteo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 91vh;
+}
+
+.tarjetaRecetario {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 30vw;
+  align-items: center;
+}
+
+.tarjetaReceta {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  height: 100%;
+  background-color: #000;
+  border-radius: 5px;
+  box-shadow: 3px 3px 15px midnightblue;
+  padding: 10px;
+  overflow-y: scroll;
+  align-items: center;
+}
+
+.tarjetaReceta-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #282828;
+  border: 3px solid crimson;
+  color: gray;
+  text-shadow: 2px 2px 2px black;
+}
+
+.tarjetaReceta-main {
+  position: relative;
+  display: flex;
+  top: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+  list-style: none;
+  width: 100%;
+  padding: 5px;
+  background-color: #31313195;
+}
+
+.tarjetaReceta-item {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 45px;
+  border-radius: 5px;
+}
+
+.tablaIngredientes {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 70vw;
+  align-items: center;
+}
+
+table {
+  position: relative;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 75%;
+  overflow-y: scroll;
+  padding: 15px;
+  top: 10px;
+}
+
+table thead {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 5px;
+}
+
+table thead tr {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+}
+
+table thead tr:nth-child(3) {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: #313131;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+table thead tr th:first-child {
+  color: mediumseagreen;
+  width: 235px;
+  background-color: #313131;
+  text-shadow: 2px 2px 2px black;
+}
+
+table thead tr th:nth-child(2) {
+  color: mediumseagreen;
+  width: 100px;
+  background-color: #313131;
+  text-shadow: 2px 2px 2px black;
+}
+
+table thead tr th:nth-child(3) {
+  color: mediumseagreen;
+  width: 100px;
+  background-color: #313131;
+  text-shadow: 2px 2px 2px black;
+}
+
+table thead tr th:nth-child(4) {
+  color: mediumseagreen;
+  width: 100px;
+  background-color: #313131;
+  text-shadow: 2px 2px 2px black;
+}
+
+table tbody {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+table tbody tr {
+  background-color: #313131;
+  border: 2px solid #000;
+}
+
+table input[type=number] {
+  width: 100px;
+  font-weight: bold;
+  text-align: center;
+}
+
+table .ingredienteInput {
+  width: 235px;
+}
+
+table .cantidadInput {
+  width: 100px;
+}
+
+table .unidadInput {
+  font-weight: bold;
+  text-align: center;
+  width: 100px;
+}
+
+.productosAlmacen {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 91vh;
+  gap: 30px;
+}
+
+.contenedorListas {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 600px;
+  padding: 10px;
+  gap: 20px;
+  background-color: #000;
+  border-radius: 10px;
+  box-shadow: 3px 3px 15px midnightblue;
+}
+
+.productos {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  font-weight: bold;
+}
+
+.productos select {
+  text-align: center;
+  width: auto;
+  border: 3px solid #308aff;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: #282828;
+  color: gray;
+  font-weight: bold;
+  padding: 3px 8px;
+}
+
+.productoDisplay {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  width: auto;
+  padding: 10px;
+  font-weight: bold;
+  background-color: #212121;
+  border-radius: 10px;
+  border: 1px solid #308aff9f;
+}
+
+.productoDisplay p {
+  background-color: #313131;
+}
+
+.agregarProducto {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 400px;
+  height: 200px;
+  background-color: #000;
+  border-radius: 5px;
+  box-shadow: 3px 3px 15px midnightblue;
+}
+
+.agregarProducto form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  align-items: center;
+  gap: 5px;
+}
+
+.agregarProducto form select {
+  text-align: center;
+}
+
+.form-input {
+  position: relative;
+  display: flex;
+  width: 60%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #313131;
+  padding: 3px;
+  font-weight: 600;
+}
+
+.form-input #precio,
+.form-input #tipo,
+.form-input #unidad {
+  text-align: center;
+  width: 120px;
+  border: 3px solid #308aff;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: #282828;
+  color: gray;
+  font-weight: bold;
+}
+
+#nombre {
+  position: relative;
+  display: flex;
+  text-align: center;
+  padding: 3px;
+  font-weight: bold;
+  width: 90%;
+  border: 3px solid #308aff;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: #282828;
+  color: gray;
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
