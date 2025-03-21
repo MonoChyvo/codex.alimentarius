@@ -1,0 +1,5 @@
+// PANTALLA Gestión de Almacén:
+
+1. "TIpo de Producto": type-radio para elegir el tipo en lugar de la lista deplegable
+2. "div.product-card": la tarjeta solo muestra el nombre y al hacer clic se despliega la informacion, para un mejor manejo visual dentro de los productos del almacen.
+3. Modal para edición de productos: el modal deberia despleagrse en un elemento ::after o ::before para realizar la edicion, no debajo de todos los elementos de la lista.
