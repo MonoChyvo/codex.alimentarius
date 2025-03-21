@@ -1,0 +1,24 @@
+:root {
+  /* Paleta de colores principal */
+  --color-primary-dark: #082032;
+  --color-secondary: #2c394b;
+  --color-tertiary: #334756;
+  --color-accent: #ff4c29;
+
+  /* Colores de texto */
+  --color-text-light: #f0f0f0;
+  --color-text-dark: #082032;
+
+  /* Colores secundarios y de estado */
+  --color-background: var(--color-primary-dark);
+  --color-card-bg: var(--color-tertiary);
+  --color-sidebar: var(--color-secondary);
+  --color-success: #4caf50;
+  --color-warning: #ffc107;
+  --color-error: #f44336;
+
+  /* Sombras */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
